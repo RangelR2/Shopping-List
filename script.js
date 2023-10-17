@@ -1,14 +1,10 @@
-document.getElementById("vamoquevamo").addEventListener("submit", function (event) {
-    event.preventDefault();
-    let userName = document.getElementById("item").value;
-    content.textContent = userName;
-});
+function pushData() {
+    let list = document.getElementById("list");
+    let content = document.createElement('li');
+    let button = document.createElement('button');
+    var inputText = document.getElementById("inputText").value;
+    var node = document.createTextNode(inputText);
+    content.appendChild(node);
+    list.appendChild(content);
 
-const list = document.querySelector('#list');
-const content = document.createElement('li')
-content.classList.add('content');
-
-list.appendChild(content);
-
-const btn = document.querySelector('#btn');
-btn.onclick = () => console.log("Teste");
+}
